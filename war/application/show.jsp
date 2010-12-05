@@ -1,23 +1,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <%@ page import="org.un.oliver.*"%>
 <%@ page import="com.google.appengine.api.datastore.*;"%>
+<html>
+<body>
 
 <%
 	Repository repository = new Repository();
 
-	Entity dataSource = repository.get("DataSource",
+	Entity dataSource = repository.get("Application",
 			Integer.parseInt((String) request.getParameter("id")));
 %>
 
-<html>
-<head>
-<title>Gobal Pulse Application "<%=dataSource.getProperty("name")%>"
-</title>
-</head>
-<body>
-
-
-<h1>Application <%=dataSource.getProperty("name")%></h1>
+<h1><%=dataSource.getProperty("name")%></h1>
 
 <table>
 	<%
