@@ -6,6 +6,18 @@
       <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
     </src_description>
   </component>
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/war/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/war" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/war/WEB-INF/classes" />
     <exclude-output />
@@ -15,6 +27,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="com.google.appengine.eclipse.core.GAE_CONTAINER" level="application" />
     <orderEntry type="inheritedJdk" />
+    <orderEntry type="library" name="Oliver Lib" level="project" />
+    <orderEntry type="library" name="Java EE 6" level="project" />
   </component>
 </module>
 
