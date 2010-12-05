@@ -6,7 +6,7 @@ public class NewDataSourceCommand implements Command {
 
 	public String execute(Map parameterMap) {
 
-		return "/datasource/bla";
+		return "/";
 	}
 
 }
