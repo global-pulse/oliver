@@ -14,6 +14,9 @@ public class OliverServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    	Component handler = router.findRoute(req.getRequestURI());
+    	
+    	handler.executePresenter(resp.getOutputStream());
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
