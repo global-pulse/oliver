@@ -21,7 +21,7 @@ These are the data stores and feeds that we know about.If we've missed one, plea
       %>
       <tr>
         <td>
-          <a href="/datasource/show?id=<%= datasource.getKey().getId() %>">
+          <a href="/datasource/show.jsp?id=<%= datasource.getKey().getId() %>">
           <%= datasource.getProperty("name") %></a>
         </td>
         <td><%= datasource.getProperty("address") %></td>
