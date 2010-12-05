@@ -23,6 +23,8 @@ to include your name with greetings you post.</p>
     }
 %>
 
+<LINK REL=StyleSheet HREF="style.css" TYPE="text/css" >
+
 <H1>Please tell us about your data source or feed:</H1>
 <form method="post" action="/app/datasource/new">
 
