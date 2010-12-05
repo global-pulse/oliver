@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3f21d85-92ee-45e6-800b-2c5175618485" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/newdatasource/id.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/newdatasource/new.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Oliver.iws" afterPath="$PROJECT_DIR$/Oliver.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/un/oliver/NewDataSourceCommand.java" afterPath="$PROJECT_DIR$/src/org/un/oliver/NewDataSourceCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/index.html" afterPath="$PROJECT_DIR$/war/index.html" />
     </list>
     <ignored path="Oliver.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,7 +64,19 @@
     <favorites_list name="Oliver" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="NewDataSourceCommand.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/un/oliver/NewDataSourceCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="0" selection-start="651" selection-end="651" vertical-scroll-proportion="0.5">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -80,8 +96,8 @@
         <option value="$PROJECT_DIR$/src/org/un/oliver/Component.java" />
         <option value="$PROJECT_DIR$/src/org/un/oliver/OliverServlet.java" />
         <option value="$PROJECT_DIR$/src/org/un/oliver/DataSourceComponent.java" />
-        <option value="$PROJECT_DIR$/src/org/un/oliver/NewDataSourceCommand.java" />
         <option value="$PROJECT_DIR$/src/org/un/oliver/Repository.java" />
+        <option value="$PROJECT_DIR$/src/org/un/oliver/NewDataSourceCommand.java" />
       </list>
     </option>
   </component>
@@ -643,7 +659,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="1024" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -658,7 +674,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32944787" sideWeight="0.6707317" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32944787" sideWeight="0.6707317" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -751,15 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/un/oliver/NewDataSourceCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="57" selection-start="593" selection-end="642" vertical-scroll-proportion="0.4375">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/un/oliver/DataSourceComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="27" selection-start="270" selection-end="270" vertical-scroll-proportion="0.1875">
@@ -785,6 +792,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="58" selection-start="243" selection-end="243" vertical-scroll-proportion="0.20761245">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/un/oliver/NewDataSourceCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="651" selection-end="651" vertical-scroll-proportion="0.5">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

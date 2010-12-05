@@ -21,5 +21,4 @@ public class NewDataSourceCommand implements Command {
         Key dataSourceKey = repository.store(dataSource);
         return "/datasource/" + dataSourceKey.toString();
     }
-
 }
