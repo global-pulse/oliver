@@ -1,35 +1,24 @@
 package org.un.oliver;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.servlet.http.*;
 
 @SuppressWarnings("serial")
 public class OliverServlet extends HttpServlet {
-
-    Map<String, Class<? extends Command>> routes = new HashMap<String, Class<? extends Command>>();
+    Router router = new DefaultRouter();
 
     public OliverServlet() {
-        routes.put("/datasource/new", NewDataSourceCommand.class);
+        router.addRoute("/datasource/new", new DataSourceComponent());
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        Class<? extends Command> handler = findHandler(req.getRequestURI());
-        Command command;
-        try {
-            command = handler.newInstance();
-            resp.sendRedirect(command.execute(req.getParameterMap()));
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
     }
 
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
-    private Class<? extends Command> findHandler(String uri) {
-        return routes.get(uri);
+        Component handler = router.findRoute(req.getRequestURI());
+        resp.sendRedirect(handler.executeCommand(req.getParameterMap()));
     }
 }
