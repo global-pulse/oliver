@@ -26,6 +26,6 @@ public class OliverServlet extends HttpServlet {
         }
 
         Key dataSourceKey = repository.store(dataSource);
-        resp.sendRedirect("/datasource/show?id="+dataSourceKey.toString());
+        resp.sendRedirect("/datasource/show?id="+dataSourceKey.getId());
     }
 }
