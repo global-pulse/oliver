@@ -20,7 +20,10 @@ These are the data stores and feeds that we know about.If we've missed one, plea
     for (Entity datasource : datasources) {
       %>
       <tr>
-        <td><%= datasource.getProperty("name") %></td>
+        <td>
+          <a href="/datasource/show?id=<%= datasource.getKey().getId() %>">
+          <%= datasource.getProperty("name") %></a>
+        </td>
         <td><%= datasource.getProperty("address") %></td>
         <td><%= datasource.getProperty("tags") %></td>
       </tr>
