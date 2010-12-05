@@ -19,6 +19,11 @@
           <root url="file://$MODULE_DIR$/src" />
         </sourceRoots>
       </configuration>
+      <facet type="google-app-engine" name="Google App Engine">
+        <configuration>
+          <sdk-home-path>$USER_HOME$/lib/appengine-java-sdk-1.4.0</sdk-home-path>
+        </configuration>
+      </facet>
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">

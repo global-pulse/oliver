@@ -3,6 +3,26 @@
   <component name="AntConfiguration">
     <defaultAnt bundledAnt="true" />
   </component>
+  <component name="ArtifactManager">
+    <artifact type="war" name="Oliver">
+      <output-path>$PROJECT_DIR$/classes/artifacts/Oliver</output-path>
+      <root id="archive" name="Oliver.war" />
+    </artifact>
+    <artifact type="exploded-war" name="Oliver:war exploded">
+      <output-path>$PROJECT_DIR$/classes/artifacts/Oliver_war_exploded</output-path>
+      <root id="root">
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="Oliver" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="Oliver Lib" />
+          </element>
+        </element>
+        <element id="javaee-facet-resources" facet="Oliver/web/Web" />
+      </root>
+    </artifact>
+  </component>
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
     <resourceExtensions />
@@ -29,15 +49,6 @@
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
-  </component>
-  <component name="FacetAutodetectingManager">
-    <autodetection-disabled>
-      <facet-type id="google-app-engine">
-        <modules>
-          <module name="Oliver" />
-        </modules>
-      </facet-type>
-    </autodetection-disabled>
   </component>
   <component name="IdProvider" IDEtalkID="A3DCFC222398454C358A3ECF47199C3A" />
   <component name="JavadocGenerationManager">

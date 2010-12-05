@@ -1,27 +1,31 @@
 package org.un.oliver;
 
+import java.io.IOException;
+import java.util.Map;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+
+import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.Key;
 
 @SuppressWarnings("serial")
 public class OliverServlet extends HttpServlet {
-    Router router = new DefaultRouter();
-
-    public OliverServlet() {
-        router.addRoute("/datasource/new", new DataSourceComponent());
-    }
-
-    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-    	Component handler = router.findRoute(req.getRequestURI());
-    	
-    	handler.executePresenter(resp.getOutputStream());
-    }
-
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
-        Component handler = router.findRoute(req.getRequestURI());
-        resp.sendRedirect(handler.executeCommand(req.getParameterMap()));
+        Entity dataSource = new Entity("DataSource");
+
+        Repository repository = new Repository();
+        Map parameterMap = req.getParameterMap();
+        
+		for (Object key : parameterMap.keySet()) {
+            String keyName = (String) key;
+
+            dataSource.setProperty(keyName, req.getParameter(keyName));
+        }
+
+        Key dataSourceKey = repository.store(dataSource);
+        resp.sendRedirect("/datasource/show?id="+dataSourceKey.toString());
     }
 }
