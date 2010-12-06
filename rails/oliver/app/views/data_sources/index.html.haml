@@ -1,0 +1,17 @@
+%h1 Listing data_sources
+%table
+  %tr
+    %th Name
+    %th Url
+    %th
+    %th
+    %th
+  - @data_sources.each do |data_source|
+    %tr
+      %td= data_source.name
+      %td= data_source.url
+      %td= link_to 'Show', data_source
+      %td= link_to 'Edit', edit_data_source_path(data_source)
+      %td= link_to 'Destroy', data_source, :confirm => 'Are you sure?', :method => :delete
+%br/
+= link_to 'New Data source', new_data_source_path

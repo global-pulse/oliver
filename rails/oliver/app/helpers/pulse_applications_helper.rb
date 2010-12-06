@@ -1,0 +1,2 @@
+module PulseApplicationsHelper
+end

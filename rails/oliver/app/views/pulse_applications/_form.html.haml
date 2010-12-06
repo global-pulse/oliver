@@ -1,0 +1,11 @@
+= form_for(@pulse_application) do |f|
+  - if @pulse_application.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@pulse_application.errors.count, "error")
+        prohibited this pulse_application from being saved:
+      %ul
+        - @pulse_application.errors.full_messages.each do |msg|
+          %li= msg
+  .actions
+    = f.submit

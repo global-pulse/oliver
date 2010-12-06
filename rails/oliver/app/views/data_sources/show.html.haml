@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @data_source.name
+%p
+  %b Url:
+  = @data_source.url
+= link_to 'Edit', edit_data_source_path(@data_source)
+|
+\#{link_to 'Back', data_sources_path}
