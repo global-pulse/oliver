@@ -3,4 +3,5 @@ class DataSource
 
   key :name, String
   key :source, String
+  key :url, String
 end

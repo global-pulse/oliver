@@ -7,5 +7,26 @@
       %ul
         - @pulse_application.errors.full_messages.each do |msg|
           %li= msg
+
+
+  .field
+    = f.label :git_hub_repository
+    (Enter the url for your github repository or username and click the 'Get Info' button)
+    %br/
+    = f.text_field :git_hub_repository
+    %input{:type => "button", :value => "Get Info", :class => "TestLink"}
+    .userinfo{:id => "userinfo"}
+      %h2 User Info
+      %ul{:id => "userinfo"}
+
+      .projectinfo
+        %h2 Projects
+        %ul{:id=>"projects"}
+
+
   .actions
     = f.submit
+
+
+
+= javascript_include_tag "enhance.js"
