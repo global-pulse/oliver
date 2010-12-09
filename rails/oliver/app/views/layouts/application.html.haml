@@ -5,6 +5,32 @@
     = stylesheet_link_tag :all
     = javascript_include_tag :defaults
     = javascript_include_tag "http://code.jquery.com/jquery-1.4.4.min.js"
+    = javascript_include_tag "github.js"
     = csrf_meta_tag
   %body
-    = yield
+    #main
+      #header
+        .userbox
+          .avatarname
+            %a{:href=>"https://github.com/grahambrooks"}
+              %img{:src=>"https://secure.gravatar.com/avatar/aa98e8aef471dc396fcec1e9162cecb2?s=140&d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png", :alt=>"", :width=>"20", :height=>"20"}
+            %a{:href=>"https://github.com/grahambrooks", :class=>"name"}
+              grahambrooks
+
+          %ul{:class=>"usernav"}
+            %li
+              %a{:href=>"https://github.com/"}
+                Dashboard
+            %li
+              %a{:href=>"https://github.com/inbox"}
+                Inbox
+              %a{:href=>"https://github.com/inbox", :class=>"unread_count "}
+                0
+            %li
+              %a{:href=>"https://github.com/account"}
+                Account Settings
+            %li
+              %a{:href=>"/logout"}
+                Log Out
+      #site
+        = yield
