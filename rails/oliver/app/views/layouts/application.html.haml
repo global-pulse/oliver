@@ -7,30 +7,76 @@
     = javascript_include_tag "http://code.jquery.com/jquery-1.4.4.min.js"
     = javascript_include_tag "github.js"
     = csrf_meta_tag
+    %meta{:content => "Global Pulse Data Source Application Directory", :name => "keywords"}/
+    %meta{:content => "Global Pulse Data and Application directory", :name => "description"}/
   %body
-    #main
-      #header
-        .userbox
-          .avatarname
-            %a{:href=>"https://github.com/grahambrooks"}
-              %img{:src=>"https://secure.gravatar.com/avatar/aa98e8aef471dc396fcec1e9162cecb2?s=140&d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png", :alt=>"", :width=>"20", :height=>"20"}
-            %a{:href=>"https://github.com/grahambrooks", :class=>"name"}
-              grahambrooks
+    #wrapper
+      #logo
+        %h1
+          - if user_signed_in? then
+            = image_tag avatar_url(current_user)
+          %a{:href => "#"} Oliver
+        %p
+          %em
+            %a{:href=> 'http://www.unglobalpulse.org'}
+              Global Pulse
+            Data Sources &amp; Application Directories
+      %hr/
 
-          %ul{:class=>"usernav"}
-            %li
-              %a{:href=>"https://github.com/"}
-                Dashboard
-            %li
-              %a{:href=>"https://github.com/inbox"}
-                Inbox
-              %a{:href=>"https://github.com/inbox", :class=>"unread_count "}
-                0
-            %li
-              %a{:href=>"https://github.com/account"}
-                Account Settings
-            %li
-              %a{:href=>"/logout"}
-                Log Out
-      #site
-        = yield
+      #header
+        #menu
+          %ul
+            %li= link_to 'home', root_path
+            %li= link_to "Pulse Applications", pulse_applications_path
+            %li= link_to "Pulse Data Sources", data_sources_path
+            - if user_signed_in? then
+              %li= link_to("Sign-out", destroy_user_session_path)
+            - else
+              %li= link_to_unless_current('Sign-in', new_user_session_path)
+        #search
+          %form{:action => "", :method => "get"}
+            %fieldset
+              %input#search-text{:name => "s", :size => "15", :type => "text"}/
+              %input#search-submit{:type => "submit", :value => "GO"}/
+      #page
+        #page-bgtop
+          #content
+            = yield
+
+          #sidebar
+            %ul
+              %li
+                %h2 My Data Sources
+                %p Global Pulse Data Source and Application Registry
+              %li
+                %h2 Links
+                %ul
+                  %li
+                    %a{:href => "#"} Nec metus sed donec
+              %li
+                %h2 Latest Data Sources
+                %p Global Pulse Data Source and Application Registry
+              %li
+                %h2 Links
+                %ul
+                  %li
+                    %a{:href => "#"} Nec metus sed donec
+              %li
+                %h2 Upstream Servers
+                %p Global Pulse Data Source and Application Registry
+              %li
+                %h2 Links
+                %ul
+                  %li
+                    %a{:href => "#"} Nec metus sed donec
+
+          %div{:style => "clear: both;"} &nbsp;
+
+      #footer
+        %p
+          Copyright (c) 2010 unglobalpulse.org
+        #messages
+          %p.notice
+            = notice
+          %p.alert
+            = alert

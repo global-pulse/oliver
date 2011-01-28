@@ -1,7 +1,7 @@
 class DataSource
-  include MongoMapper::Document
+  include Mongoid::Document
 
-  key :name, String
-  key :source, String
-  key :url, String
+field :name
+field :source
+field :url
 end

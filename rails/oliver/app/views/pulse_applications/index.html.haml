@@ -1,12 +1,17 @@
-%h1 Listing pulse_applications
+%h1 Listing Pulse Applications
 %table
   %tr
+    %th Application
+    %th
     %th
     %th
     %th
   - @pulse_applications.each do |pulse_application|
     %tr
-      %td= link_to 'Show', pulse_application
+      %td= pulse_application.name
+      %td= pulse_application.description
+      %td= pulse_application.url
+      %td= link_to 'Show', pulse_application_path(pulse_application)
       %td= link_to 'Edit', edit_pulse_application_path(pulse_application)
       %td= link_to 'Destroy', pulse_application, :confirm => 'Are you sure?', :method => :delete
 %br/

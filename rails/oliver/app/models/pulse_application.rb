@@ -1,9 +1,9 @@
 class PulseApplication
-  include MongoMapper::Document
+  include Mongoid::Document
 
-  key :name, String
-  key :description, String
-  key :git_hub_repository, String
-  key :source, String
-  key :url, String
+  field :name
+  field :description
+  field :git_hub_repository
+  field :source
+  field :url
 end

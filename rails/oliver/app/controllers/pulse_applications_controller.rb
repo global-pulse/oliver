@@ -1,4 +1,7 @@
 class PulseApplicationsController < ApplicationController
+
+  before_filter :authenticate_user!
+
   # GET /pulse_applications
   # GET /pulse_applications.xml
   def index
@@ -15,7 +18,7 @@ class PulseApplicationsController < ApplicationController
   def show
     @pulse_application = PulseApplication.find(params[:id])
 
-    @repository = gitgub(@pulse_application.url)
+#    @repository = github(@pulse_application.url)
 
     respond_to do |format|
       format.html # show.html.erb
