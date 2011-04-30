@@ -1,0 +1,19 @@
+%h1 Connected Platforms
+%table
+  %tr
+    %th Name
+    %th Url
+    %th Primary purpose
+    %th Actions
+    %th
+    %th
+  - @platforms.each do |platform|
+    %tr
+      %td= platform.name
+      %td= platform.url
+      %td= platform.primarypurpose
+      %td= link_to 'Show', platform
+      %td= link_to 'Edit', edit_platform_path(platform)
+      %td= link_to 'Destroy', platform, :confirm => 'Are you sure?', :method => :delete
+%br/
+= link_to 'New platform', new_platform_path

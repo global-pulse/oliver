@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @platform.name
+%p
+  %b Url:
+  = @platform.url
+= link_to 'Edit', edit_platform_path(@platform)
+|
+\#{link_to 'Back', platforms_path}

@@ -4,6 +4,10 @@ Oliver::Application.routes.draw do
   resources :pulse_applications
 
   resources :data_sources
+  
+  resources :platforms
+  
+  resources :tools
 
   root :to => "application#index"
 end

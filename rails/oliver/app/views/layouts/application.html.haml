@@ -19,16 +19,16 @@
         %p
           %em
             %a{:href=> 'http://www.unglobalpulse.org'}
-              Global Pulse
-            Data Sources &amp; Application Directories
+              Global Pulse Directories
       %hr/
 
       #header
         #menu
           %ul
             %li= link_to 'home', root_path
-            %li= link_to "Pulse Applications", pulse_applications_path
-            %li= link_to "Pulse Data Sources", data_sources_path
+            %li= link_to "Data Sources", data_sources_path
+            %li= link_to "Tools", pulse_applications_path
+            %li= link_to "Platforms", platforms_path
             - if user_signed_in? then
               %li= link_to("Sign-out", destroy_user_session_path)
             - else
