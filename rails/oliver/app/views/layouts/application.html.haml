@@ -6,6 +6,7 @@
     = javascript_include_tag :defaults
     = javascript_include_tag "http://code.jquery.com/jquery-1.4.4.min.js"
     = javascript_include_tag "github.js"
+    = javascript_include_tag "twitStream.js"
     = csrf_meta_tag
     %meta{:content => "Global Pulse Data Source Application Directory", :name => "keywords"}/
     %meta{:content => "Global Pulse Data and Application directory", :name => "description"}/
@@ -49,19 +50,6 @@
                 %h2 My Data Sources
                 %p Global Pulse Data Source and Application Registry
               %li
-                %h2 Links
-                %ul
-                  %li
-                    %a{:href => "#"} Nec metus sed donec
-              %li
-                %h2 Latest Data Sources
-                %p Global Pulse Data Source and Application Registry
-              %li
-                %h2 Links
-                %ul
-                  %li
-                    %a{:href => "#"} Nec metus sed donec
-              %li
                 %h2 Upstream Servers
                 %p Global Pulse Data Source and Application Registry
               %li
@@ -69,6 +57,13 @@
                 %ul
                   %li
                     %a{:href => "#"} Nec metus sed donec
+
+              %p
+                Five most recent tweets mentioning
+                %a{:target=>"_blank", :href=>"http://search.twitter.com/search?q=%23ftw"}
+                  \#ftw:
+              #tweets.twitStream.5{:title=>"#gpbuild"}
+
 
           %div{:style => "clear: both;"} &nbsp;
 
