@@ -3,7 +3,9 @@ Oliver::Application.routes.draw do
 
   resources :pulse_applications
 
-  resources :data_sources
+  resources :data_sources do
+    resources :comments
+  end
   
   resources :platforms
   

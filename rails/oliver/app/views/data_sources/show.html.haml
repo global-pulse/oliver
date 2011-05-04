@@ -1,10 +1,66 @@
 %p#notice= notice
-%p
-  %b Name:
-  = @data_source.name
-%p
-  %b Url:
-  = @data_source.url
+
+%table
+  %tr
+    %td Name
+    %td= @data_source.name
+  %tr
+    %td Source
+    %td= @data_source.source
+  %tr
+    %td Generating Agency
+    %td= @data_source.generatingagency
+  %tr
+    %td Data Format
+    %td= @data_source.dataformat
+  %tr
+    %td Acquisition Date
+    %td= @data_source.acquisitondate
+  %tr
+    %td Contributor UID
+    %td= @data_source.contributoruid
+  %tr
+    %td Affiliation
+    %td= @data_source.affiliation
+  %tr
+    %td Who Can View
+    %td= @data_source.whocanview
+  %tr
+    %td Who Can Edit
+    %td= @data_source.whocanedit
+  %tr
+    %td Who can Admit
+    %td= @data_source.whocanadmit
+  %tr
+    %td Data Quality
+    %td= @data_source.dataquality
+  %tr
+    %td Data Standards
+    %td= @data_source.datastandards
+  %tr
+    %td Meta Data Link
+    %td= @data_source.metatdatalink
+  %tr
+    %td API Link
+    %td= @data_source.apilink
+  %tr
+    %td Url
+    %td= @data_source.url
+
+%h2 Comments
+#comments
+  - if @data_source.comments.size > 0
+    - @data_source.comments.each do |comment|
+      %h3= comment.name
+      %p= comment.content
+  = form_for [@data_source, Comment.new] do |f|
+    = f.label :name
+    = f.text_field :name
+    %br/
+    = f.text_area :content, :rows => 10
+    %br/
+    = f.submit
+
 = link_to 'Edit', edit_data_source_path(@data_source)
 |
 \#{link_to 'Back', data_sources_path}

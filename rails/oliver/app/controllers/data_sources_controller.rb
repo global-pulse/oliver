@@ -1,4 +1,5 @@
 class DataSourcesController < ApplicationController
+  before_filter :authenticate_user!, :only => [:edit, :update, :destroy]
   # GET /data_sources
   # GET /data_sources.xml
   def index

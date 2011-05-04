@@ -6,7 +6,7 @@ class ToolsController < ApplicationController
     @tool = Tool.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.xml  { render :xml => @tool }
     end
   end
