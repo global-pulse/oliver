@@ -28,8 +28,8 @@ h3
 
 p, ul, ol
   margin-top: 0
-  line-height: 240%
-  text-align: justify
+  //line-height: 240%
+  //text-align: justify
 
 ul, ol
 
@@ -85,39 +85,33 @@ hr
   float: left
   width: 540px
   height: 64px
-
-#menu ul
-  margin: 0
-  padding: 0px 0px 0px 5px
-  list-style: none
-  line-height: normal
-
-#menu li
-  display: block
-  float: left
-
-#menu a
-  display: block
-  float: left
-  height: 20px
-  margin-right: 3px
-  padding: 28px 25px 15px 25px
-  background: url(images/img07.jpg) no-repeat left 32px
-  text-decoration: none
-  text-transform: uppercase
-  font-family: Arial, Helvetica, sans-serif
-  font-size: 11px
-  color: #FFFFFF
-
-#menu a:hover
-  text-decoration: underline
-
-#menu .current_page_item a
-  height: 20px
-  color: #FFFFFF
-
-#menu .first
-  background: none
+  ul
+    margin: 0
+    padding: 0px 0px 0px 5px
+    list-style: none
+    line-height: normal
+  li
+    display: block
+    float: left
+  a
+    display: block
+    float: left
+    height: 20px
+    margin-right: 3px
+    padding: 28px 25px 15px 25px
+    background: url(images/img07.jpg) no-repeat left 32px
+    text-decoration: none
+    text-transform: uppercase
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 11px
+    color: #FFFFFF
+  a:hover
+    text-decoration: underline
+  .current_page_item a
+    height: 20px
+    color: #FFFFFF
+  .first
+    background: none
 
 /* Search
 
@@ -171,26 +165,22 @@ hr
 
 #logo
   width: 960px
-  height: 170px
+  height: 70px
   margin: 0 auto
-
-#logo h1, #logo p
-  margin: 0px
-  line-height: normal
-  font-weight: normal
-  color: #FFFFFF
-
-#logo p
-  text-transform: uppercase
-  font-size: 10px
-
-#logo h1
-  padding-top: 80px
-  font-size: 34px
-
-#logo a
-  text-decoration: none
-  color: #FFFFFF
+  h1, p
+    margin: 0px
+    line-height: normal
+    font-weight: normal
+    color: #FFFFFF
+  p
+    text-transform: uppercase
+    font-size: 10px
+  h1
+    padding-top: 10px
+    font-size: 34px
+  a
+    text-decoration: none
+    color: #FFFFFF
 
 /* Content
 
@@ -249,45 +239,37 @@ hr
   float: left
   width: 162px
   padding-left: 22px
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Calibri, Arial, Helvetica, sans-serif
   font-size: 10px
-
-#sidebar ul
-  margin: 0
-  padding: 0
-  list-style: none
-  line-height: normal
-
-#sidebar li
-  margin-bottom: 30px
-  padding: 0 0 10px 0px
-
-#sidebar li ul
-
-#sidebar li li
-  margin: 0 0 0 5px
-  padding-left: 10px
-  background: url(images/img09.jpg) no-repeat left 4px
-
-#sidebar p
-  margin: 0
-  padding: 0px 10px
-
-#sidebar h2
-  height: 26px
-  margin: 0 0 10px 0px
-  padding: 8px 0 2px 10px
-  background: url(images/img06.jpg) no-repeat left top
-  text-transform: capitalize
-  font-size: 11px
-  font-weight: bold
-  color: #42423E
-
-#sidebar p
-  line-height: 200%
-
-#sidebar a
-  color: #696969
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    line-height: normal
+  li
+    margin-bottom: 30px
+    padding: 0 0 10px 0px
+  li ul
+  li li
+    margin: 0 0 0 5px
+    padding-left: 10px
+    background: url(images/img09.jpg) no-repeat left 4px
+  p
+    margin: 0
+    padding: 0px 10px
+  h2
+    height: 26px
+    margin: 0 0 10px 0px
+    padding: 8px 0 2px 10px
+    background: url(images/img06.jpg) no-repeat left top
+    text-transform: capitalize
+    font-size: 11px
+    font-weight: bold
+    color: #42423E
+  p
+    line-height: 200%
+  a
+    color: #696969
 
 /* Calendar
 
@@ -356,3 +338,62 @@ hr
 
 #footer a
   color: #000000
+
+
+div.data-store
+  div
+    float: left
+    margin-left: 10px
+    margin-top: 10px
+    width: 223px
+    height: 300px
+    //border: 1px solid #333333
+    background: #ECF9E4
+  form div
+    width: 0
+    height: 0
+  .name
+    width: 100%
+    float: none
+    height: 20px
+    ul
+      align: center
+    li
+      display: inline
+      padding-left: 3px
+      padding-right: 7px
+      border-right: 1px dotted #066
+    li.last
+      display: inline
+      padding-left: 3px
+      padding-right: 3px
+      border-right: 0px
+  .comments
+    padding: 3px
+    width: 452px
+    h2
+      font-size: x-small
+    h3
+      font-size: xx-small
+  .map
+    width: 223px
+  .tags, .quality-scores
+    margin: 0px
+    width: 223px
+    height: 110px
+  .dates
+    width: 223px
+  .description
+    width: 255px
+  table
+    //border: 1px solid #333333
+    font-size: 10px
+    td
+      //border: 1px solid #333333
+  .assessment
+    width: 255px
+
+.tweet
+  img
+    float: left
+    margin-right: 3px

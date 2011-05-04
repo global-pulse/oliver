@@ -57,11 +57,12 @@
                   %li
                     %a{:href => "#"} Nec metus sed donec
 
-              %p
-                Five most recent tweets mentioning
-                %a{:target=>"_blank", :href=>"http://search.twitter.com/search?q=%23ftw"}
-                  \#gpbuild:
-              #tweets.twitStream.5{:title=>"#gpbuild"}
+              %ul
+                %li
+                  %h2 Five most recent tweets mentioning
+                  %a{:target=>"_blank", :href=>"http://search.twitter.com/search?q=%23ftw"}
+                    \#gpbuild:
+                  #tweets.twitStream.5{:title=>"#gpbuild"}
 
 
           %div{:style => "clear: both;"} &nbsp;
