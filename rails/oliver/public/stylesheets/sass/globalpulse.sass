@@ -8,7 +8,7 @@ body
   padding: 0
   background: white url(images/img01.jpg) repeat-x left top
   font-family: Arial, Helvetica, sans-serif
-  font-size: 12px
+  font-size: 1.1em
   color: #66665E
 
 h1, h2, h3
@@ -16,7 +16,7 @@ h1, h2, h3
   text-transform: uppercase
   font-family: "Trebuchet MS", Georgia, "Times New Roman", Times, serif
   font-weight: normal
-  color: #4B8749
+  //color: #4B8749
 
 h1
   font-size: 44px
@@ -56,22 +56,14 @@ hr
   display: none
 
 .list1
+  li
+    float: left
+    line-height: normal
+  li img
+    margin: 0 30px 30px 0
+  li.alt img
+    margin-right: 0
 
-.list1 li
-  float: left
-  line-height: normal
-
-.list1 li img
-  margin: 0 30px 30px 0
-
-.list1 li.alt img
-  margin-right: 0
-
-#wrapper
-
-/* Header
-
-#header-wrapper
 
 #header
   width: 1000px
@@ -113,44 +105,6 @@ hr
   .first
     background: none
 
-/* Search
-
-#search
-  float: right
-  width: 305px
-  height: 50px
-
-#search form
-  float: right
-  margin: 0
-  padding: 25px 20px 0 0
-
-#search fieldset
-  margin: 0
-  padding: 0
-  border: none
-
-#search input
-  float: left
-  font: 12px Georgia, "Times New Roman", Times, serif
-  border: none
-
-#search-text
-  width: 135px
-  height: 18px
-  padding: 3px 0 0 5px
-  border: 1px solid #333333
-  background: #ECF9E4
-  color: #000000
-
-#search-submit
-  height: 21px
-  margin-left: 10px
-  padding: 0px 5px
-  background: #000000
-  color: #FFFFFF
-
-/* Page
 
 #page
   width: 1000px
@@ -190,51 +144,6 @@ hr
   padding-top: 20px
   padding-right: 40px
 
-/* Post
-
-.post
-  margin-bottom: 25px
-
-.post .title
-  height: 30px
-  color: #42423E
-
-.post .title a
-  text-decoration: none
-  color: #42423E
-
-.post .date
-
-.post .meta
-  margin-top: -10px
-  padding: 2px 30px 2px 16px
-  background: url(images/img08.jpg) no-repeat left 10px
-  border-bottom: 1px #BDBDBB dotted
-  font-family: Arial, Helvetica, sans-serif
-  font-weight: normal
-  font-size: 10px
-  color: #66665E
-
-.post .meta span
-  display: block
-  margin-top: -10px
-
-.post .meta a
-
-.post .entry
-  padding: 10px 0
-
-.post .links
-  margin: 0 250px 0 0
-  padding: 0 0 0 0px
-
-.post .links .comments
-
-.post .links .permalink
-  padding-left: 17px
-
-/* Sidebar
-
 #sidebar
   float: left
   width: 162px
@@ -271,73 +180,22 @@ hr
   a
     color: #696969
 
-/* Calendar
-
-#calendar
-
-#calendar caption
-  padding-bottom: 5px
-  font-weight: bold
-
-#calendar table
-  width: 100%
-  border-collapse: collapse
-  border-bottom: 1px solid #24130F
-  border-left: 1px solid #24130F
-  border-right: 1px solid #24130F
-
-#calendar thead th
-  padding: 5px 0
-  text-align: center
-  border-top: 1px solid #24130F
-  border-left: 1px solid #24130F
-  background: #24130F
-
-#calendar tbody td
-  padding: 5px 0
-  text-align: center
-  border-top: 1px solid #24130F
-  border-left: 1px solid #24130F
-  border-bottom: 1px solid #24130F
-
-#calendar tfoot td
-  padding: 5px
-  border-left: 1px solid #24130F
-  border-bottom: 1px solid #24130F
-
-#calendar tfoot #next
-  border-top: 1px solid #24130F
-  text-align: right
-
-#calendar tfoot #prev
-  border-top: 1px solid #24130F
-
-#calendar .pad
-  border-bottom: 1px solid #24130F
-
-#calendar #today
-  background: #24130F
-
-/* Footer
-
 #footer
   width: 1000px
   height: 95px
   margin: 0 auto
   padding: 0
   background: url(images/img05.jpg) no-repeat left top
-
-#footer p
-  margin: 0
-  padding: 56px 0
-  text-align: center
-  line-height: normal
-  text-transform: uppercase
-  font-size: 10px
-  color: #66665E
-
-#footer a
-  color: #000000
+  p
+    margin: 0
+    padding: 56px 0
+    text-align: center
+    line-height: normal
+    text-transform: uppercase
+    font-size: 10px
+    color: #66665E
+  a
+    color: #000000
 
 
 div.data-store
@@ -420,3 +278,32 @@ div.data-store
     background-color: #242424
   .color6
     background-color: #dbdbdb
+
+#user
+  background-color: #dbdbdb
+  border-top: none
+  border-top-left-radius: 0px 0px
+  border-top-left-radius: 0px 0px
+  border-top-right-radius: 0px 0px
+  border-top-right-radius: 0px 0px
+  float: right
+  font-size: 12px
+  padding: 8px 5px 7px 10px
+  ul
+    display: inline
+    font-weight: bold
+    margin: 0px
+    li
+      display: inline
+      list-style-type: none
+      margin: 0px
+      padding: 0px 8px 0px 9px
+  .avatar
+    display: inline
+    font-weight: bold
+    padding-right: 6px
+    img
+      border: 1px solid white
+      margin-right: 3px
+      margin-top: -3px
+      vertical-align: middle

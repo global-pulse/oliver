@@ -1,0 +1,27 @@
+#header
+  #menu
+    %ul
+      %li= link_to 'home', root_path
+      %li= link_to "Data Sources", data_sources_path
+      %li= link_to "Tools", pulse_applications_path
+      %li= link_to "Platforms", platforms_path
+      - if user_signed_in? then
+        %li= link_to("Sign-out", destroy_user_session_path)
+      - else
+        %li= link_to_unless_current('Sign-in', new_user_session_path)
+  -##search
+  -#  %form{:action => "", :method => "get"}
+  -#    %fieldset
+  -#      %input#search-text{:name => "s", :size => "15", :type => "text"}/
+  -#      %input#search-submit{:type => "submit", :value => "GO"}/
+  #user
+    - if user_signed_in? then
+      .avatar
+        = image_tag avatar_url(current_user)
+        = link_to current_user.email, user_password_path
+    %ul
+      - if user_signed_in? then
+
+        %li= link_to 'logout', destroy_user_session_path
+      - else
+        %li= link_to 'login', new_user_session_path

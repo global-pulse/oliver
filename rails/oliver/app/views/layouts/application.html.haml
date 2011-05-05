@@ -10,20 +10,6 @@
     %meta{:content => "Global Pulse Data Source Application Directory", :name => "keywords"}/
     %meta{:content => "Global Pulse Data and Application directory", :name => "description"}/
   %body
-    #swatch
-      .color1
-        %p Color 1: HTML: #4b92db  RGB: 75/146/219  HSV: 210/66/86
-      .color2
-        %p Color 2: HTML: #31608f  RGB: 49/96/143  HSV: 210/66/56
-      .color3
-        %p Color 3: HTML: #dbc34b  RGB: 219/195/75  HSV: 50/66/86
-      .color4
-        %p Color 4: HTML: #8f6f31  RGB: 143/111/49  HSV: 40/66/56
-      .color5
-        %p Color 5: HTML: #242424  RGB: 36/36/36  HSV: 0/0/14
-      .color6
-        %p Color 6: HTML: #dbdbdb  RGB: 219/219/219  HSV: 0/0/86
-
     #wrapper
       #logo
         %h1
@@ -34,58 +20,17 @@
           %em
             %a{:href=> 'http://www.unglobalpulse.org'}
               Global Pulse Directories
-      %hr/
-
-      #header
-        #menu
-          %ul
-            %li= link_to 'home', root_path
-            %li= link_to "Data Sources", data_sources_path
-            %li= link_to "Tools", pulse_applications_path
-            %li= link_to "Platforms", platforms_path
-            - if user_signed_in? then
-              %li= link_to("Sign-out", destroy_user_session_path)
-            - else
-              %li= link_to_unless_current('Sign-in', new_user_session_path)
-        #search
-          %form{:action => "", :method => "get"}
-            %fieldset
-              %input#search-text{:name => "s", :size => "15", :type => "text"}/
-              %input#search-submit{:type => "submit", :value => "GO"}/
+      #global-navigation
+        = render :partial => 'layouts/global_navigation'
       #page
         #page-bgtop
           #content
             = yield
-
           #sidebar
-            %ul
-              %li
-                %h2 My Data Sources
-                %p Global Pulse Data Source and Application Registry
-              %li
-                %h2 Upstream Servers
-                %p Global Pulse Data Source and Application Registry
-              %li
-                %h2 Links
-                %ul
-                  %li
-                    %a{:href => "#"} Nec metus sed donec
-
-              %ul
-                %li
-                  %h2 Five most recent tweets mentioning
-                  %a{:target=>"_blank", :href=>"http://search.twitter.com/search?q=%23ftw"}
-                    \#gpbuild:
-                  #tweets.twitStream.5{:title=>"#gpbuild"}
-
+            = render :partial => 'layouts/sidebar'
 
           %div{:style => "clear: both;"} &nbsp;
-
       #footer
-        %p
-          Copyright (c) 2010 unglobalpulse.org
-        #messages
-          %p.notice
-            = notice
-          %p.alert
-            = alert
+        = render :partial => 'layouts/footer'
+      #swatch
+        = render :partial => 'layouts/colour_swatch'

@@ -1,0 +1,19 @@
+%ul
+  %li
+    %h2 My Data Sources
+    %p Global Pulse Data Source and Application Registry
+  %li
+    %h2 Upstream Servers
+    %p Global Pulse Data Source and Application Registry
+  %li
+    %h2 Links
+    %ul
+      %li
+        %a{:href => "#"} Nec metus sed donec
+
+  %ul
+    %li
+      %h2 Five most recent tweets mentioning
+      %a{:target=>"_blank", :href=>"http://search.twitter.com/search?q=%23ftw"}
+        \#gpbuild:
+      #tweets.twitStream.5{:title=>"#gpbuild"}
