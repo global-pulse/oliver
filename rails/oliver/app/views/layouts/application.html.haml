@@ -13,8 +13,6 @@
     #wrapper
       #logo
         %h1
-          - if user_signed_in? then
-            = image_tag avatar_url(current_user)
           %a{:href => "#"} Oliver
         %p
           %em
@@ -26,8 +24,8 @@
         #page-bgtop
           #content
             = yield
-          #sidebar
-            = render :partial => 'layouts/sidebar'
+          -##sidebar
+          -#  = render :partial => 'layouts/sidebar'
 
           %div{:style => "clear: both;"} &nbsp;
       #footer

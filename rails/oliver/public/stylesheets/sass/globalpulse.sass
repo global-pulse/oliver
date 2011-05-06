@@ -1,25 +1,23 @@
-/*
- *Design by Free CSS Templates
- *http://www.freecsstemplates.org
- *Released for free under a Creative Commons Attribution 2.5 License
+$content-width: 960px
+$header-height: 23px
+$large-font-size: 22px //44px
+
 
 body
   margin: 0
   padding: 0
-  background: white url(images/img01.jpg) repeat-x left top
+  background: white //url(images/img01.jpg) repeat-x left top
   font-family: Arial, Helvetica, sans-serif
   font-size: 1.1em
-  color: #66665E
 
 h1, h2, h3
   margin: 0
   text-transform: uppercase
   font-family: "Trebuchet MS", Georgia, "Times New Roman", Times, serif
   font-weight: normal
-  //color: #4B8749
 
 h1
-  font-size: 44px
+  font-size: $large-font-size
 
 h2
   font-size: 18px
@@ -28,15 +26,10 @@ h3
 
 p, ul, ol
   margin-top: 0
-  //line-height: 240%
-  //text-align: justify
 
 ul, ol
 
 blockquote
-
-a
-  color: #41ACE7
 
 a:hover
   text-decoration: none
@@ -55,6 +48,29 @@ img.right
 hr
   display: none
 
+
+@mixin rounded-border
+  border: 1px dotted #066
+  border-radius: 5px
+  padding: 5px 5px 5px 5px
+
+div
+  @include rounded-border
+  //border: 2px
+
+
+table
+  width: 100%
+  @include rounded-border
+  tr
+    td
+      @include rounded-border
+      span
+        float: left
+    th
+      text-align: left
+      @include rounded-border
+
 .list1
   li
     float: left
@@ -65,84 +81,107 @@ hr
     margin-right: 0
 
 
-#header
-  width: 1000px
-  height: 64px
-  margin: 0 auto
-  background: url(images/img02.jpg) no-repeat left top
-
-/* Menu
-
-#menu
-  float: left
-  width: 540px
-  height: 64px
-  ul
-    margin: 0
-    padding: 0px 0px 0px 5px
-    list-style: none
-    line-height: normal
-  li
-    display: block
-    float: left
-  a
-    display: block
-    float: left
+#wrapper
+  #logo
+    width: $content-width
+    height: 70px
+    margin: 0 auto
+    h1, p
+      margin: 0px
+      line-height: normal
+      font-weight: normal
+    p
+      text-transform: uppercase
+      font-size: 10px
+    h1
+      padding-top: 10px
+      font-size: $large-font-size
+      img
+        height: 60px
+        width: 36px
+    a
+      text-decoration: none
+  #global-navigation
+    #header
+      width: $content-width
+      height: 32px
+      margin: 0 auto
+      #menu
+        float: left
+        width: 540px
+        height: $header-height
+        //height: 64px
+        ul
+          margin: 0
+          padding: 0px 0px 0px 5px
+          list-style: none
+          line-height: normal
+        li
+          display: block
+          float: left
+        a
+          display: block
+          float: left
+          height: $header-height
+          margin-right: 3px
+          //padding: 28px 25px 15px 25px
+          //background: url(images/img07.jpg) no-repeat left 32px
+          text-decoration: none
+          text-transform: uppercase
+          font-family: Arial, Helvetica, sans-serif
+          font-size: 11px
+        a:hover
+          text-decoration: underline
+        .current_page_item a
+          height: 20px
+        .first
+          background: none
+  #page
+    width: $content-width
+    margin: 0 auto
+    #page-bgtop
+      padding-top: 12px
+      #content
+        width: $content-width
+        padding-top: 12px
+        padding-right: 40px
+  #footer
+    width: $content-width
+    height: 32px
+    margin: 0 auto
+    padding: 0
+    p
+      margin: 0
+      padding: 12px 0
+      text-align: center
+      line-height: normal
+      text-transform: uppercase
+      font-size: 10px
+  #swatch
+    width: 100%
     height: 20px
-    margin-right: 3px
-    padding: 28px 25px 15px 25px
-    background: url(images/img07.jpg) no-repeat left 32px
-    text-decoration: none
-    text-transform: uppercase
-    font-family: Arial, Helvetica, sans-serif
-    font-size: 11px
-    color: #FFFFFF
-  a:hover
-    text-decoration: underline
-  .current_page_item a
-    height: 20px
-    color: #FFFFFF
-  .first
-    background: none
+    float:left
+    p
+      font-size: 10px
+    div
+      height: 20px
+      width: 300px
+    .color1
+      background-color: #4b92db
+    .color2
+      background-color: #31608f
+    .color3
+      background-color: #dbc34b
+    .color4
+      background-color: #8f6f31
+    .color5
+      background-color: #242424
+    .color6
+      background-color: #dbdbdb
 
-
-#page
-  width: 1000px
-  margin: 0 auto
-  background: url(images/img04.jpg) repeat-y left top
-
-#page-bgtop
-  padding-top: 30px
-  background: url(images/img03.jpg) no-repeat left top
-
-/** LOGO
-
-#logo
-  width: 960px
-  height: 70px
-  margin: 0 auto
-  h1, p
-    margin: 0px
-    line-height: normal
-    font-weight: normal
-    color: #FFFFFF
-  p
-    text-transform: uppercase
-    font-size: 10px
-  h1
-    padding-top: 10px
-    font-size: 34px
-  a
-    text-decoration: none
-    color: #FFFFFF
 
 /* Content
 
-#content
-  float: right
-  width: 738px
-  padding-top: 20px
-  padding-right: 40px
 
 #sidebar
   float: left
@@ -162,7 +201,7 @@ hr
   li li
     margin: 0 0 0 5px
     padding-left: 10px
-    background: url(images/img09.jpg) no-repeat left 4px
+    //background: url(images/img09.jpg) no-repeat left 4px
   p
     margin: 0
     padding: 0px 10px
@@ -170,7 +209,7 @@ hr
     height: 26px
     margin: 0 0 10px 0px
     padding: 8px 0 2px 10px
-    background: url(images/img06.jpg) no-repeat left top
+    //background: url(images/img06.jpg) no-repeat left top
     text-transform: capitalize
     font-size: 11px
     font-weight: bold
@@ -180,22 +219,6 @@ hr
   a
     color: #696969
 
-#footer
-  width: 1000px
-  height: 95px
-  margin: 0 auto
-  padding: 0
-  background: url(images/img05.jpg) no-repeat left top
-  p
-    margin: 0
-    padding: 56px 0
-    text-align: center
-    line-height: normal
-    text-transform: uppercase
-    font-size: 10px
-    color: #66665E
-  a
-    color: #000000
 
 
 div.data-store
@@ -257,30 +280,8 @@ div.data-store
     margin-right: 3px
 
 
-#swatch
-  width: 100%
-  height: 20px
-  float:left
-  p
-    font-size: 10px
-  div
-    height: 20px
-    width: 300px
-  .color1
-    background-color: #4b92db
-  .color2
-    background-color: #31608f
-  .color3
-    background-color: #dbc34b
-  .color4
-    background-color: #8f6f31
-  .color5
-    background-color: #242424
-  .color6
-    background-color: #dbdbdb
 
 #user
-  background-color: #dbdbdb
   border-top: none
   border-top-left-radius: 0px 0px
   border-top-left-radius: 0px 0px
