@@ -2,6 +2,7 @@ class DataSource
   include Mongoid::Document
 
   field :name
+  key :name
   field :source
   field :generatingagency
   field :dataformat

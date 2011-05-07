@@ -7,11 +7,11 @@
   - @data_sources.each do |data_source|
     %tr
       %td= data_source.name
-      %td= data_source.url
+      %td= link_to data_source.url, data_source.url
 
       %td
-        = link_to tag(:span, {:class => 'ui-icon ui-icon-document'}), data_source
-        = link_to tag(:span, {:class => 'ui-icon ui-icon-wrench'}), edit_data_source_path(data_source)
+        = icon_link_to :document, data_source
+        = icon_link_to :pencil, edit_data_source_path(data_source)
         = link_to tag(:span, {:class => 'ui-icon ui-icon-trash'}), data_source, :confirm => 'Are you sure?', :method => :delete
 
 

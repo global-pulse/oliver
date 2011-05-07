@@ -1,12 +1,16 @@
 %p#notice= notice
-\#{link_to 'Data stores', data_sources_path}
+
+#page-navigation
+  %ul
+    %li= icon_link_to :home, data_sources_path
+    %li= icon_link_to :pencil, edit_data_source_path(@data_source)
+    %li= icon_link_to :document, data_source_path
 
 .data-store
   .name
     %ul
       %li Data store
       %li= @data_source.name
-      %li= link_to 'Edit', edit_data_source_path(@data_source)
   .description
     %h2 Description
     %table

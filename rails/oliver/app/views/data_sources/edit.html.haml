@@ -1,5 +1,11 @@
+#page-navigation
+  %ul
+    %li= icon_link_to :home, data_sources_path
+    %li= icon_link_to :document, data_source_path
+
+
 %h1 Editing data_source
 = render 'form'
-= link_to 'Show', @data_source
-|
-\#{link_to 'Back', data_sources_path}
+-#= link_to 'Show', @data_source
+-#|
+-#\#{link_to 'Back', data_sources_path}

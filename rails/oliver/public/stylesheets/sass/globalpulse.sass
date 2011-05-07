@@ -2,6 +2,24 @@ $content-width: 960px
 $header-height: 23px
 $large-font-size: 22px //44px
 
+@mixin inline-menu
+  float: none
+  height: 20px
+  ul
+    align: center
+    li
+      display: inline-block
+      padding-left: 3px
+      padding-right: 7px
+      //border-left: 1px dotted #066
+      //border-right: 1px dotted #066
+    li.last
+      border-left: 1px dotted #066
+      display: inline-block
+      padding-left: 3px
+      padding-right: 3px
+      border-right: 0px
+
 
 body
   margin: 0
@@ -145,6 +163,8 @@ table
         width: $content-width
         padding-top: 12px
         padding-right: 40px
+      #page-navigation
+        @include inline-menu
   #footer
     width: $content-width
     height: 32px
@@ -239,16 +259,16 @@ div.data-store
     height: 20px
     ul
       align: center
-    li
-      display: inline
-      padding-left: 3px
-      padding-right: 7px
-      border-right: 1px dotted #066
-    li.last
-      display: inline
-      padding-left: 3px
-      padding-right: 3px
-      border-right: 0px
+      li
+        display: inline
+        padding-left: 3px
+        padding-right: 7px
+        border-right: 1px dotted #066
+      li.last
+        display: inline
+        padding-left: 3px
+        padding-right: 3px
+        border-right: 0px
   .comments
     padding: 3px
     width: 452px
