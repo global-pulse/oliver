@@ -61,9 +61,11 @@
         %td= @data_source.url
   .dates
     %h2 Dates
+    #timeline-chart
     %p Insert timeline chart
   .map
     %h2 Map
+    #intensity-chart
   .assessment
     .tags
       %h2 Tags
@@ -87,3 +89,4 @@
         %br/
         = f.submit
 
+= javascript_include_tag 'map-sample'
