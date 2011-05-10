@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
-gem "mongoid", "2.0.0.rc.6"
-gem "bson_ext", "~> 1.2"
+gem 'rails', '>=3.0.7'
+gem "mongoid", ">=2.0.1"
+gem "bson_ext", ">= 1.2"
 gem 'haml'
 gem 'hpricot'
 gem 'rcov'
