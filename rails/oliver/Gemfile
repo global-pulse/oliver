@@ -8,3 +8,4 @@ gem 'hpricot'
 gem 'rcov'
 gem 'devise'
 gem 'ci_reporter', :groups => [:development, :test]
+gem 'sass'
