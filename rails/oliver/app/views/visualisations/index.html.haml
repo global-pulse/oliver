@@ -1,0 +1,16 @@
+%h1 Available Visualisations
+%table
+  %tr
+    %th Name
+    %th Url
+    %th
+    %th
+    %th
+  - @visualisations.each do |v|
+    %tr
+      %td= v.name
+      %td= link_to 'Show', v
+      %td= link_to 'Edit', edit_visualisation_path(v)
+      %td= link_to 'Destroy', v, :confirm => 'Are you sure?', :method => :delete
+%br/
+= link_to 'New Visualisation', new_visualisation_path

@@ -12,55 +12,20 @@
       %li Data store
       %li= @data_source.name
   .description
-    %h2 Description
-    %table
-      %tr
-        %td Name
-        %td= @data_source.name
-      %tr
-        %td Source
-        %td= @data_source.source
-      %tr
-        %td Generating Agency
-        %td= @data_source.generatingagency
-      %tr
-        %td Data Format
-        %td= @data_source.dataformat
-      %tr
-        %td Acquisition Date
-        %td= @data_source.acquisitondate
-      %tr
-        %td Contributor UID
-        %td= @data_source.contributoruid
-      %tr
-        %td Affiliation
-        %td= @data_source.affiliation
-      %tr
-        %td Who Can View
-        %td= @data_source.whocanview
-      %tr
-        %td Who Can Edit
-        %td= @data_source.whocanedit
-      %tr
-        %td Who can Admit
-        %td= @data_source.whocanadmit
-      %tr
-        %td Data Quality
-        %td= @data_source.dataquality
-      %tr
-        %td Data Standards
-        %td= @data_source.datastandards
-      %tr
-        %td Meta Data Link
-        %td= @data_source.metatdatalink
-      %tr
-        %td API Link
-        %td= @data_source.apilink
-      %tr
-        %td Url
-        %td= @data_source.url
+    = render :partial => "description", :locals => {:data_source => @data_source}
   .dates
     %h2 Dates
+    #timeline-data
+      -#%table
+      -#  %tr
+      -#    - time_line = @data_source.time_line
+      -#    - time_line.columns.each do |column_title|
+      -#      %th=column_title
+      -#  - time_line.rows.each do |row|
+      -#    %tr
+      -#      - row.each_cell do |cell|
+      -#        %td= cell
+      
     #timeline-chart
     %p Insert timeline chart
   .map

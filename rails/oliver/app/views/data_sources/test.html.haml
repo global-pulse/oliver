@@ -1,0 +1,18 @@
+#page-navigation
+  %ul
+    %li= icon_link_to :home, data_sources_path
+    %li= icon_link_to :document, data_source_path
+
+.test-result
+  %table
+    %tr
+      %th Name
+      %th Organisation
+      %th Category
+      %th Query URI
+    - @test_result.each do |item|
+      %tr
+        %td= item.name
+        %td= item.organisation
+        %td= item.category
+        %td= link_to "Query", "#{item.query_uri}"

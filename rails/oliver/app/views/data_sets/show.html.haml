@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @data_set.name
+%p
+  %b Uri:
+  = @data_set.uri
+%p
+  %b Description:
+  = @data_set.description
+= link_to 'Edit', edit_data_source_data_set_path(@data_source, @data_set)
+|
+\#{link_to 'Back', data_source_data_sets_path(@data_source)}

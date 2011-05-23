@@ -1,0 +1,8 @@
+
+data_source_one:
+  name: Data Source1
+  uri: http://some/uri
+
+data_source_two:
+  name: Data Source2
+  uri: http://some/uri

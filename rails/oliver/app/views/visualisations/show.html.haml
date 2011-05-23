@@ -1,0 +1,8 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @visualisation.name
+
+= link_to 'Edit', edit_visualisation_path(@visualisation)
+|
+\#{link_to 'Back', visualisations_path}

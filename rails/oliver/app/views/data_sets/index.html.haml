@@ -1,0 +1,19 @@
+%h1 Listing data_sets
+%table
+  %tr
+    %th Name
+    %th Uri
+    %th Description
+    %th
+    %th
+    %th
+  - @data_sets.each do |data_set|
+    %tr
+      %td= data_set.name
+      %td= data_set.uri
+      %td= data_set.description
+      %td= link_to 'Show', data_set
+      %td= link_to 'Edit', edit_data_set_path(data_set)
+      %td= link_to 'Destroy', data_set, :confirm => 'Are you sure?', :method => :delete
+%br/
+= link_to 'New Data set', new_data_source_data_set_path(@data_source)

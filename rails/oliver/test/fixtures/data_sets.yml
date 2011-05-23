@@ -1,0 +1,10 @@
+one_data_set:
+  name: MyString
+  uri: MyString
+  description: MyText
+  data_source: one_data_source
+
+two:
+  name: MyString
+  uri: MyString
+  description: MyText

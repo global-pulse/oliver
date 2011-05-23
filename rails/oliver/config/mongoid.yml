@@ -1,6 +1,3 @@
-#MongoMapper.connection = Mongo::Connection.new('localhost', 27017)
-#MongoMapper.database = "#oliver-#{Rails.env}"
-#
 defaults: &defaults
   host: localhost
   # slaves:
