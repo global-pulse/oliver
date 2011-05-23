@@ -71,12 +71,6 @@
       <source manual="true" />
       <source from="Gemfile" />
     </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="undata" version="0.1.1" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source from="Gemfile" />
-    </requirement>
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">

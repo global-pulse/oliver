@@ -9,7 +9,6 @@ gem 'rcov'
 gem 'devise'
 gem 'ci_reporter', :groups => [:development, :test]
 gem 'sass'
-gem 'undata', ">= 0.1.1"
 
 group :development do
   gem 'test-unit'
