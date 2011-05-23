@@ -1,0 +1,13 @@
+%h2 Comments
+- @data_source.comments.each do |comment|
+  %h3= comment.name
+  %p= comment.content
+= form_for [@data_source, Comment.new] do |f|
+  %fieldset
+    %legend New Comment
+    %br/
+    = f.label :content
+    %br/
+    = f.text_area :content, :rows => 4
+    %br/
+    = f.submit

@@ -1,3 +1,6 @@
+# A DataSource represents an organisation that makes data available to others.
+# A data source contains a number of DataSets that have ben used for analysis.
+#
 class DataSource
   include Mongoid::Document
 

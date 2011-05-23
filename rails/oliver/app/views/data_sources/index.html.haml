@@ -1,3 +1,9 @@
+%p#notice= notice
+
+#page-navigation
+  %ul
+    %li= icon_link_to :plusthick, new_data_source_path
+
 %h1 Data Sources
 %table
   %tr
@@ -10,10 +16,6 @@
       %td= link_to data_source.url, data_source.url
 
       %td
-        = icon_link_to :document, data_source
+        = icon_link_to :document, data_source_path(data_source)
         = icon_link_to :pencil, edit_data_source_path(data_source)
-        = link_to tag(:span, {:class => 'ui-icon ui-icon-trash'}), data_source, :confirm => 'Are you sure?', :method => :delete
-
-
-%br/
-= link_to 'New Data source', new_data_source_path
+        -#= link_to tag(:span, {:class => 'ui-icon ui-icon-trash'}), data_source, :confirm => 'Are you sure?', :method => :delete

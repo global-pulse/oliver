@@ -1,6 +1,7 @@
 $content-width: 960px
 $header-height: 23px
 $large-font-size: 22px //44px
+$panel-width: 900px
 
 @mixin inline-menu
   float: none
@@ -20,6 +21,10 @@ $large-font-size: 22px //44px
       padding-right: 3px
       border-right: 0px
 
+@mixin rounded-border
+  border: 1px dotted #066
+  border-radius: 5px
+  padding: 5px 5px 5px 5px
 
 body
   margin: 0
@@ -66,11 +71,11 @@ img.right
 hr
   display: none
 
+.navigation
+  @include inline-menu
+  height: 20px
 
-@mixin rounded-border
-  border: 1px dotted #066
-  border-radius: 5px
-  padding: 5px 5px 5px 5px
+
 
 div
   @include rounded-border
@@ -246,8 +251,9 @@ div.data-store
     float: left
     margin-left: 10px
     margin-top: 10px
-    width: 223px
-    height: 300px
+    //width: 223px
+    width: $panel-width
+    //height: 300px
     //border: 1px solid #333333
     background: #ECF9E4
   form div
@@ -271,7 +277,7 @@ div.data-store
         border-right: 0px
   .comments
     padding: 3px
-    width: 452px
+    width: $panel-width
     h2
       font-size: x-small
     h3

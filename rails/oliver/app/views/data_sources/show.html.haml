@@ -9,49 +9,37 @@
 .data-store
   .name
     %ul
-      %li Data store
-      %li= @data_source.name
+      %li
+        Data store:
+        = @data_source.name
   .description
     = render :partial => "description", :locals => {:data_source => @data_source}
-  .dates
-    %h2 Dates
-    #timeline-data
-      -#%table
-      -#  %tr
-      -#    - time_line = @data_source.time_line
-      -#    - time_line.columns.each do |column_title|
-      -#      %th=column_title
-      -#  - time_line.rows.each do |row|
-      -#    %tr
-      -#      - row.each_cell do |cell|
-      -#        %td= cell
-      
-    #timeline-chart
-    %p Insert timeline chart
-  .map
-    %h2 Map
-    #intensity-chart
-  .assessment
-    .tags
-      %h2 Tags
-    .quality-scores
-      %h2 Quality Scores
-  .comments
-    %h2 Comments
-    - @data_source.comments.each do |comment|
-      %h3= comment.name
-      %p= comment.content
-    = form_for [@data_source, Comment.new] do |f|
-      %fieldset
-        %legend New Comment
-        = f.label :name
-        %br/
-        = f.text_field :name
-        %br/
-        = f.label :content
-        %br/
-        = f.text_area :content, :rows => 4
-        %br/
-        = f.submit
+  -#.dates
+  -#  %h2 Dates
+  -#  #timeline-data
+  -#%table
+  -#  %tr
+  -#    - time_line = @data_source.time_line
+  -#    - time_line.columns.each do |column_title|
+  -#      %th=column_title
+  -#  - time_line.rows.each do |row|
+  -#    %tr
+  -#      - row.each_cell do |cell|
+  -#        %td= cell
+  
+  -#  #timeline-chart
+  -#  %p Insert timeline chart
+  -#.map
+  -#  %h2 Map
+  -#  #intensity-chart
+  -#.assessment
+  -#  .tags
+  -#    %h2 Tags
+  -#  .quality-scores
+  -#    %h2 Quality Scores
+  .datasets
+    =render :partial => "data_sets", :locals => {:data_source => @data_source }
+  .comment
+    =render :partial => "comments", :local => {:data_source => @data_source }
 
-= javascript_include_tag 'map-sample'
+-#= javascript_include_tag 'map-sample'

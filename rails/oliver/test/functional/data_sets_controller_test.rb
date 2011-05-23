@@ -43,6 +43,11 @@ class DataSetsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "pull requests update the cached data value" do
+    @data_set.save
+    post :pull, :data_source_id => @data_source.to_param, :id => @data_set.to_param, :data_set => @data_set.attributes
+  end
+
   test "should update data_set" do
     @data_set.save
     put :update, :data_source_id => @data_source.to_param, :id => @data_set.to_param, :data_set => @data_set.attributes

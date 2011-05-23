@@ -10,7 +10,11 @@ Oliver::Application.routes.draw do
       get :test
     end
     resources :comments
-    resources :data_sets
+    resources :data_sets do
+      member do
+        post :pull
+      end
+    end
   end
   
   resources :platforms
