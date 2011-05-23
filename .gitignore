@@ -1,2 +1,4 @@
-war/WEB-INF/classes
+Gemfile.lock
+log
+public/stylesheets/globalpulse.css
 .DS_Store
