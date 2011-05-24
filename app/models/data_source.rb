@@ -6,11 +6,13 @@ class DataSource
 
   field :name
   key :name
-  field :url
+  field :uri
   field :api_key
   field :source
   field :client_adaptor
-  field :catalogue
+  field :catalogue, :type => Array
+  field :raw_catalogue
+  field :catalogue_script
   field :generatingagency
   field :dataformat
   field :acquisitondate
@@ -34,4 +36,16 @@ class DataSource
 
     adaptor.data_sets
   end
+
+  def refresh_catalogue(host_adaptor)
+    u                  = URI::parse(URI.escape(uri))
+    self.raw_catalogue = host_adaptor.get(u)
+  end
+
+  def build_catalogue(mapping)
+    dt        = DataTransformation.new(mapping)
+    self.data = []
+    dt.transform(self.raw_data, self.data)
+  end
+
 end

@@ -8,12 +8,12 @@
 %table
   %tr
     %th Name
-    %th Url
+    %th Uri
     %th
   - @data_sources.each do |data_source|
     %tr
       %td= data_source.name
-      %td= link_to data_source.url, data_source.url
+      %td= link_to data_source.uri, data_source.uri
 
       %td
         = icon_link_to :document, data_source_path(data_source)
