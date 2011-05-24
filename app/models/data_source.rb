@@ -42,10 +42,10 @@ class DataSource
     self.raw_catalogue = host_adaptor.get(u)
   end
 
-  def build_catalogue(mapping)
-    dt        = DataTransformation.new(mapping)
-    self.data = []
-    dt.transform(self.raw_data, self.data)
+  def build_data_sets(script)
+    dsb = DataSetBuilder.new(script)
+
+    dsb.build(self)
   end
 
 end

@@ -5,9 +5,7 @@ class DataSetTest < ActiveSupport::TestCase
     @raw_data = <<-EOD
 <data organisation="WHO" category="Health systems resources" name="Hospital beds (per 10 000 population)">
   <record>
-    <field name="Country or Area">Afghanistan</field>
-    <field name="Year(s)">2003</field>
-    <field name="Value">4</field>
+    <field name="Country or Area">Afghanistan</field><field name="Year(s)">2003</field><field name="Value">4</field>
   </record>
   <record>
     <field name="Country or Area">Albania</field>
@@ -47,7 +45,6 @@ class DataSetTest < ActiveSupport::TestCase
 
     ds.transform(mapping)
 
-    puts ds.data
     assert_equal 3, ds.data.length
     assert_equal 'Afghanistan', ds.data[0]['area']
   end

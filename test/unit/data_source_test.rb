@@ -40,4 +40,16 @@ class DataSourceTest < ActiveSupport::TestCase
 
     assert_equal @raw_data, ds.raw_catalogue
   end
+
+  test "build data sets creates datasets names after the catalogue entries" do
+    ds = DataSource.new(:name => "foo", :uri => "http://some/uri")
+    ds.raw_catalogue = @raw_data
+
+#    ds.build_data_sets("datasets :selector => '/datasets/dataset' do
+#  dataset :name => select('[@name]')
+#end")
+#
+#    assert_equal "BOP: capital account credit, US$", ds.data_sets.first.name,
+
+  end
 end

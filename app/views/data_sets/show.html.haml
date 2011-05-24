@@ -17,12 +17,12 @@
     = @data_set.description
   %p
     %b Transform script
-  %pre
+  %pre.prettyprint.lang-rb
     = @data_set.transform_script
   %p
     Raw Data
-  %pre
-    = @data_set.raw_data
+  %pre.prettyprint.lang-xml
+    = format_raw_data(@data_set.raw_data)
   %p Tansformed Data
   - if @data_set.data && @data_set.data.size > 0
     %table
@@ -33,3 +33,5 @@
         %tr
           - @data_set.data[0].keys.each do |key|
             %td= e[key]
+%script
+  $(document).ready(function() {prettyPrint();});

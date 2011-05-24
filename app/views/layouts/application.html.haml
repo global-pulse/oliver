@@ -3,11 +3,13 @@
   %head
     %title Oliver
     = stylesheet_link_tag :all
+    = stylesheet_link_tag "prettify.css"
     = javascript_include_tag :defaults
     = javascript_include_tag "github.js"
     = javascript_include_tag "twitStream.js"
     = javascript_include_tag 'https://www.google.com/jsapi'
-
+    = javascript_include_tag "prettify.js"
+    =javascript_include_tag "lang-ml"
     = csrf_meta_tag
     %meta{:content => "Global Pulse Data Source Application Directory", :name => "keywords"}/
     %meta{:content => "Global Pulse Data and Application directory", :name => "description"}/
