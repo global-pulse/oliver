@@ -1,6 +1,7 @@
 require 'net/http'
 
-class DataSet < DataSource
+class DataSet
+  include Mongoid::Document
   belongs_to :data_source
 
   field :name, :type => String

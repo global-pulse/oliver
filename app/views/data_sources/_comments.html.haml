@@ -1,7 +1,8 @@
 %h2 Comments
 - @data_source.comments.each do |comment|
-  %h3= comment.name
-  %p= comment.content
+  .comment
+    .name= comment.name
+    .content= comment.content
 = form_for [@data_source, Comment.new] do |f|
   %fieldset
     %legend New Comment

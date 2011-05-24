@@ -5,7 +5,6 @@ class DataSource
   include Mongoid::Document
 
   field :name
-  key :name
   field :uri
   field :api_key
   field :source

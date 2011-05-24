@@ -4,8 +4,7 @@
     %li= icon_link_to :document, data_source_path
 
 
-%h1 Editing data_source
+%h1
+  Editing Data Source:
+  = @data_source.name
 = render 'form'
--#= link_to 'Show', @data_source
--#|
--#\#{link_to 'Back', data_sources_path}

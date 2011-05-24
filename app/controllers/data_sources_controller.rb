@@ -73,14 +73,4 @@ class DataSourcesController < ApplicationController
       format.xml { head :ok }
     end
   end
-
-  def test
-    @data_source = DataSource.find(params[:id])
-    @test_result = @data_source.test
-
-    respond_to do |format|
-      format.html
-      format.xml { render :xml => @test_result }
-    end
-  end
 end

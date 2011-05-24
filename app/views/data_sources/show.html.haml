@@ -10,7 +10,7 @@
   .name
     %ul
       %li
-        Data store:
+        Data Source:
         = @data_source.name
   .description
     = render :partial => "description", :locals => {:data_source => @data_source}
@@ -40,6 +40,6 @@
   .datasets
     =render :partial => "data_sets", :locals => {:data_source => @data_source }
   .comment
-    =render :partial => "comments", :local => {:data_source => @data_source }
+    =render :partial => "comments" #, :local => {:data_source => @data_source }
 
 -#= javascript_include_tag 'map-sample'

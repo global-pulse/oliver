@@ -2,7 +2,7 @@
 
 #page-navigation
   %ul
-    %li= icon_link_to :home, data_source_data_sets_path(@data_source)
+    %li= icon_link_to :home, data_source_path #(@data_source, @data_set)
     %li= icon_link_to :pencil, edit_data_source_data_set_path(@data_source, @data_set)
 
 .data-set
@@ -19,10 +19,7 @@
     %b Transform script
   %pre.prettyprint.lang-rb
     = @data_set.transform_script
-  %p
-    Raw Data
-  %pre.prettyprint.lang-xml
-    = format_raw_data(@data_set.raw_data)
+
   %p Tansformed Data
   - if @data_set.data && @data_set.data.size > 0
     %table
@@ -33,5 +30,11 @@
         %tr
           - @data_set.data[0].keys.each do |key|
             %td= e[key]
+
+  %p
+    Raw Data
+  %pre.prettyprint.lang-xml
+    = format_raw_data(@data_set.raw_data)
+
 %script
   $(document).ready(function() {prettyPrint();});

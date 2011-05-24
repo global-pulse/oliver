@@ -1,7 +1,7 @@
 class DataSetsController < ApplicationController
   def index
     @data_source = DataSource.find(params[:data_source_id])
-    @data_sets   = DataSet.all
+    @data_sets   = @data_source.data_sets
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,14 +14,14 @@ class DataSetsController < ApplicationController
     @data_set    = DataSet.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html
       format.xml { render :xml => @data_set }
     end
   end
 
   def new
     @data_source = DataSource.find(params[:data_source_id])
-    @data_set    = DataSet.new
+    @data_set    = @data_source.data_sets.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -53,21 +53,6 @@ class DataSetsController < ApplicationController
         format.xml { render :xml => @data_set, :status => :created, :location => @data_set }
       else
         format.html { render :action => "new" }
-        format.xml { render :xml => @data_set.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  def pull
-    @data_source = DataSource.find(params[:data_source_id])
-    @data_set    = DataSet.new(params[:data_set])
-
-    respond_to do |format|
-      if @data_set.update_attributes(params[:data_set])
-        format.html { redirect_to(data_source_data_set_path(@data_source.to_param, @data_set.to_param), :notice => 'Data set was successfully updated.') }
-        format.xml { head :ok }
-      else
-        format.html { render :action => "edit" }
         format.xml { render :xml => @data_set.errors, :status => :unprocessable_entity }
       end
     end
