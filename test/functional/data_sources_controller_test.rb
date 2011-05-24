@@ -3,15 +3,17 @@ require 'test_helper'
 class DataSourcesControllerTest < ActionController::TestCase
   setup do
     @data_source = DataSource.new(:name => "Foo")
+    @user = User.create!(:email => "someone@where.com", :password => "something-obscure", :confirm_password => "something-obscure")
+    sign_in @user
     assert_equal "Foo", @data_source.name
   end
 
   teardown do
     @data_source.delete unless @data_source.deleted?
+    @user.delete unless @user.deleted?
   end
 
   test "should get index" do
-    sign_in User.new
     get :index
     assert_response :success
     assert_not_nil assigns(:data_sources)
@@ -38,5 +40,4 @@ class DataSourcesControllerTest < ActionController::TestCase
     get :show, :id => @data_source.id
     assert_response :success
   end
-
 end

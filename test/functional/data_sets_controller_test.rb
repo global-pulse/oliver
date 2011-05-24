@@ -5,11 +5,14 @@ class DataSetsControllerTest < ActionController::TestCase
     @data_source = DataSource.new(:name => "Foo")
     @data_source.save
     @data_set = @data_source.data_sets.build(:name => "bar")
+    @user = User.create!(:email => "someone@where.com", :password => "something-obscure", :confirm_password => "something-obscure")
+    sign_in @user
   end
 
   teardown do
     @data_source.delete
     @data_set.delete unless @data_set.deleted?
+    @user.delete unless @user.deleted?
   end
 
   test "should get index" do
@@ -41,11 +44,6 @@ class DataSetsControllerTest < ActionController::TestCase
     @data_set.save
     get :edit, :data_source_id => @data_source.to_param,  :id => @data_set.to_param
     assert_response :success
-  end
-
-  test "pull requests update the cached data value" do
-    @data_set.save
-    post :pull, :data_source_id => @data_source.to_param, :id => @data_set.to_param, :data_set => @data_set.attributes
   end
 
   test "should update data_set" do

@@ -1,4 +1,5 @@
 class DataSetsController < ApplicationController
+  before_filter :authenticate_user!
   def index
     @data_source = DataSource.find(params[:data_source_id])
     @data_sets   = @data_source.data_sets

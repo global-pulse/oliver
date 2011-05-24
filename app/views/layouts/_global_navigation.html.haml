@@ -9,7 +9,7 @@
     - if user_signed_in? then
       .avatar
         = image_tag avatar_url(current_user)
-        = link_to current_user.email, user_password_path
+        = link_to current_user, edit_user_registration_path
     %ul
       - if user_signed_in? then
 

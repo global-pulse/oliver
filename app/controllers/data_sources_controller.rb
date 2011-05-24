@@ -1,5 +1,5 @@
 class DataSourcesController < ApplicationController
-  before_filter :authenticate_user!, :only => [:edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   def index
     @data_sources = DataSource.all

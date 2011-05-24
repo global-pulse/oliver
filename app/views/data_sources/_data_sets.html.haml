@@ -16,6 +16,7 @@
         %td
           = icon_link_to :document, data_source_data_set_path(@data_source, ds)
           = icon_link_to :pencil, edit_data_source_data_set_path(@data_source, ds)
+          = link_to tag(:span, {:class => 'ui-icon ui-icon-trash'}), data_source_data_set_path(@data_source, ds), :confirm => 'Are you sure?', :method => :delete
 
 - else
   (No data sets defined yet)

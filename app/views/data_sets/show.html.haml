@@ -2,7 +2,7 @@
 
 #page-navigation
   %ul
-    %li= icon_link_to :home, data_source_path #(@data_source, @data_set)
+    %li= icon_link_to :home, data_source_path(@data_source)
     %li= icon_link_to :pencil, edit_data_source_data_set_path(@data_source, @data_set)
 
 .data-set

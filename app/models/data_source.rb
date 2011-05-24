@@ -27,7 +27,7 @@ class DataSource
 
   validates_presence_of :name, :on => :create, :message => "A unique data source name is required"
 
-  embeds_many :comments
+  has_many :comments
   has_many :data_sets
 
   def test

@@ -1,7 +1,9 @@
 %h2 Comments
 - @data_source.comments.each do |comment|
   .comment
-    .name= comment.name
+    .name
+      = image_tag avatar_url(comment.user)
+      = comment.user
     .content= comment.content
 = form_for [@data_source, Comment.new] do |f|
   %fieldset

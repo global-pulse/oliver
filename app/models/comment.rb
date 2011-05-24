@@ -1,7 +1,7 @@
 class Comment
   include Mongoid::Document
-  field :name
   field :content
 
-  embedded_in :data_source, :inverse_of => :comments
+  belongs_to :data_source
+  belongs_to :user
 end
