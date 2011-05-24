@@ -1,7 +1,0 @@
-.bundle
-db/*.sqlite3
-log/*.log
-tmp/**/*
-.idea/workspace.xml
-public/stylesheets/globalpulse.css
-Gemfile.lock
