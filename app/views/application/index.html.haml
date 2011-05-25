@@ -1,12 +1,14 @@
-.post
-  %h2.title
-    %a{:href => "#"} Welcome to Oliver
-  %p.meta
-    = Date.today.to_s
-    %br/
-    %span
-      Posted by
-      %a{:href => "#"} Someone
-  .entry
-    %p
+%h2.title
+  %a{:href => "#"} Welcome to Oliver, a tool for being more informed.
+%p
+  Oliver is a directory service for data, data manipulation tools and visualisations. The basic idea is to
+  provide a framework for people to collect, process and visualise data in ways that may provide insight into
+  emerging future problems.
+%p
+  Sources of data are registered within Oliver as Data Sources. Within each Data Source you can define data sets,
+  each data set has a unique reference (currently a URI) to the contributing web site. Having defined where the
+  data is coming from the data can be retrieved and processed and then visualised either directly in Oliver or
+  by connecting another tool to the data feed.
+%p
+  Access to each Oliver instance is protected by a username and password.
 
