@@ -12,5 +12,6 @@
 %p
   Access to each Oliver instance is protected by a username and password.
 %p
-  = pluralize(@dataset_count, 'Data Source')
-  currently defined.
+  = pluralize(@datasource_count, 'Data Source')
+  currently defined with.
+  = pluralize(@dataset_count, 'Data Set')
